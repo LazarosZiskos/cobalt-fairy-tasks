@@ -1,7 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
+// changed the vite.config and created a proxy to overcoke the CORS issue
+
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://dev.cobaltfairy.online",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
+});
