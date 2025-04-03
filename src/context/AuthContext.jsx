@@ -2,20 +2,20 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
-// TASK 2 //
+// TASK 2 - Authentication context using React Context //
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
 
-  // Load token on page refresh
+  // Load token from localStorage on mount - persists login state
   useEffect(() => {
     const stored = localStorage.getItem("token");
     if (stored) setToken(stored);
   }, []);
 
-  // Login the user using Axios POST and store the token
+  // Log in the user using Axios POST and store the JWT
   const login = async () => {
     try {
       const response = await axios.post("/api/login", {
@@ -31,12 +31,13 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  //logout the user by removing the token and clearing local storage
+  //Log out the user by removing the token and clearing local storage
   const logout = () => {
     setToken(null);
     localStorage.removeItem("token");
   };
 
+  // Initialize AuthProvider with token and login/logout functions
   return (
     <AuthContext.Provider value={{ token, login, logout }}>
       {children}

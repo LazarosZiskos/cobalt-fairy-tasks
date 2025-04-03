@@ -1,7 +1,7 @@
 import React from "react";
 import "./MyButton.scss";
 
-// TASK 4 //
+// TASK 4 - Reusable Styled Button Component with variants  //
 
 const MyButton = ({ text, variant = "primary", ...props }) => {
   return (

@@ -1,7 +1,12 @@
 import React from "react";
+import DataFetch from "../components/DataFetch";
 
 const TaskOne = () => {
-  return <div>TaskOne</div>;
+  return (
+    <div>
+      <DataFetch />
+    </div>
+  );
 };
 
 export default TaskOne;

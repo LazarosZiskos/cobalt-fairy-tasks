@@ -1,7 +1,13 @@
-import React from "react";
+import UserForm from "../components/UserForm";
+import TestAuth from "../components/TestAuth";
 
 const TaskTwoAndThree = () => {
-  return <div>TaskTwoAndThree</div>;
+  return (
+    <div>
+      <UserForm />
+      <TestAuth />
+    </div>
+  );
 };
 
 export default TaskTwoAndThree;

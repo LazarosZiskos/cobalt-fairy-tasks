@@ -5,12 +5,14 @@ import { userSchema } from "../validation";
 import "./UserForm.scss";
 import MyButton from "./MyButton";
 
-// TASK 3 //
+// TASK 3 - Form Component with JWT authentication and Submission //
 
 const UserForm = () => {
-  const { token } = useContext(AuthContext);
-  const [errors, setErrors] = useState({});
+  const { token } = useContext(AuthContext); // Get JWT from context
+  const [errors, setErrors] = useState({}); // Form validation errors
+  const [message, setMessage] = useState(null); // API success message
 
+  // Form data state
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -18,8 +20,7 @@ const UserForm = () => {
     phone: "",
   });
 
-  const [message, setMessage] = useState(null);
-
+  // Handle input changes
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -31,9 +32,11 @@ const UserForm = () => {
     e.preventDefault();
     setMessage(null);
 
+    // Validate form data using Zod schema
     const result = userSchema.safeParse(formData);
 
     if (!result.success) {
+      // Field specific validation errors
       const fieldErrors = {};
       result.error.errors.forEach((err) => {
         fieldErrors[err.path[0]] = err.message;
@@ -43,8 +46,12 @@ const UserForm = () => {
     }
 
     try {
+      // Send data using external service
       const result = await getUser(formData, token);
+
       setMessage(`User created! ID: ${result.user_id}, Name: ${formData.name}`);
+
+      // Reset form data and errors
       setFormData({ name: "", surname: "", email: "", phone: "" });
       setErrors({});
     } catch (err) {

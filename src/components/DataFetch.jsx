@@ -2,24 +2,26 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
+import "./DataFetch.scss";
 
-// TASK 1 //
+// TASK 1 - Fetch and Display posts from protected API //
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [sortAsc, setSortAsc] = useState(false);
 
   useEffect(() => {
-    // Get Token
+    // Fetch token and post data when component mounts
     const getData = async () => {
       try {
+        // Login to get JWT token
         const getToken = await axios.post("/api/login", {
           username: "dev1",
           password: "12cf#$!@34",
         });
         const token = getToken.data.token;
 
-        // Get Posts
+        // Use token to fetch protected post data
         const getPosts = await axios.get("/api/posts", {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -34,7 +36,7 @@ const Posts = () => {
     getData();
   }, []);
 
-  // Sort Posts by ID
+  // Sort Posts by ID Ascending/Descending order
   const sortPostsById = () => {
     const sorted = [...posts].sort((a, b) => {
       return sortAsc ? a.id - b.id : b.id - a.id;
@@ -44,10 +46,10 @@ const Posts = () => {
   };
 
   return (
-    <div>
+    <div className="posts-container">
       <h2>Posts</h2>
       {posts.length > 0 ? (
-        <table border={5} cellPadding={8} cellSpacing={2}>
+        <table border={1} cellPadding={8} cellSpacing={2}>
           <thead>
             <tr>
               <th
@@ -81,7 +83,8 @@ const Posts = () => {
           </tbody>
         </table>
       ) : (
-        <p>Posts Loading...</p>
+        // Loading message while data is being fetched
+        <p className="loading-message">Posts Loading...</p>
       )}
     </div>
   );
