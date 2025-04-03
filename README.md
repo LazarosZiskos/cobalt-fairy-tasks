@@ -35,12 +35,14 @@ Then open http://localhost:5173 in your browser.
 ```
 
 ## 🗂️ Project Structure
+```
 /src
   /components     → Reusable UI elements
   /routes         → One page per task
   /context        → AuthContext for managing JWT login state
   /services       → Axios request helpers
   /validation     → Zod schema for form validation
+```
 
 ## ✨ Extras & Enhancements
 These features were added to go beyond the base requirements:
