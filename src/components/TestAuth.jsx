@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MyButton from "./MyButton.jsx";
 import { AuthContext } from "../context/AuthContext.jsx";
-// import "./TestAuth.scss";
+import "./TestAuth.scss";
 
 const TestAuth = () => {
   const { token, logout, login } = useContext(AuthContext);
