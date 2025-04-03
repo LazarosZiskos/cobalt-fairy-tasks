@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "./Navbar.scss"; // We'll style it next
+import "./Navbar.scss";
+
+// Simple Navigation bar to allow easy access to each task page.
+// Not part of the original task scope - but added for better presentation and usability
 
 const Navbar = () => {
   return (

@@ -1,5 +1,7 @@
 import "./Home.scss";
 
+// Home Component (landing page)
+
 const Home = () => {
   return (
     <div className="home-container">

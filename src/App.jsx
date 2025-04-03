@@ -6,6 +6,9 @@ import TaskFour from "./routes/TaskFour";
 import Home from "./routes/Home";
 import Navbar from "./components/Navbar";
 
+// Uses React Router to separate and organize task views
+// Included NavBar for easy navigation
+
 function App() {
   return (
     <Router>

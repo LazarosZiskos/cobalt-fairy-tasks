@@ -33,6 +33,8 @@ const UserForm = () => {
     setMessage(null);
 
     // Validate form data using Zod schema
+    // Zod is used for client-side validation (not required but added for form integrity
+    // and better error handling)
     const result = userSchema.safeParse(formData);
 
     if (!result.success) {
