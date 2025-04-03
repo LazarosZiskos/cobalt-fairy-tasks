@@ -1,12 +1,62 @@
-# React + Vite
+# 👋 Welcome – Cobalt Fairy Trial by Lazaros Ziskos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi there! Thank you for taking the time to review my submission.
+This is a React project built to demonstrate clean architecture, component design, authenticated API handling, and a thoughtful user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Project Status
 
-## Expanding the ESLint configuration
+All required tasks have been successfully completed — including all core functionality, authentication flow, form handling, and protected API requests.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bonus improvements like styling, input validation, and navigation were added to enhance the experience and code clarity.
+
+---
+
+## ⚙️ Getting Started
+
+These steps will get the project running locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/LazarosZiskos/cobalt-fairy-tasks.git
+
+# 2. Navigate to the project directory
+cd cobalt-fairy-tasks
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+
+Then open http://localhost:5173 in your browser.
+
+```
+
+## 🗂️ Project Structure
+/src
+  /components     → Reusable UI elements
+  /routes         → One page per task
+  /context        → AuthContext for managing JWT login state
+  /services       → Axios request helpers
+  /validation     → Zod schema for form validation
+
+## ✨ Extras & Enhancements
+These features were added to go beyond the base requirements:
+
+- Minimal SASS styling for a cleaner UI and better layout
+- React Router to separate tasks into distinct routes
+- Zod-based form validation (clean, type-safe)
+- Clear code comments for reviewer readability
+- A navigation bar to easily explore each task
+
+## Final Notes
+Each task can be viewed independently through the navigation bar.
+This project was built with care, clarity, and developer experience in mind — I hope you enjoy reviewing it as much as I enjoyed building it!
+
+
+Thanks again for your time and consideration.
+— Lazaros Ziskos
+
+
