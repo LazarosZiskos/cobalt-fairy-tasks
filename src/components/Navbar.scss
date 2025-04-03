@@ -1,0 +1,31 @@
+.navbar {
+    background-color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+  
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid transparent; // 👈 no underline by default
+        transition: opacity 0.2s, border-bottom 0.2s;
+  
+        &:hover,
+        &.active {
+          opacity: 0.8;
+          border-bottom: 2px solid #ccc; // 👈 gray line on hover/active
+        }
+      }
+    }
+  }
+  

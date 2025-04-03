@@ -3,6 +3,8 @@ import MyButton from "./MyButton.jsx";
 import { AuthContext } from "../context/AuthContext.jsx";
 import "./TestAuth.scss";
 
+// TASK 2 //
+
 const TestAuth = () => {
   const { token, logout, login } = useContext(AuthContext);
 

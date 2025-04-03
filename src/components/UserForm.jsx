@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { getUser } from "../services/userService";
 import { userSchema } from "../validation";
-// import "./UserForm.scss";
+import "./UserForm.scss";
 import MyButton from "./MyButton";
 
 // TASK 3 //

@@ -1,6 +1,8 @@
 import React from "react";
 import "./MyButton.scss";
 
+// TASK 4 //
+
 const MyButton = ({ text, variant = "primary", ...props }) => {
   return (
     <button className={`my-button ${variant}`} {...props}>
