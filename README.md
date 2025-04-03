@@ -53,7 +53,7 @@ These features were added to go beyond the base requirements:
 - Clear code comments for reviewer readability
 - A navigation bar to easily explore each task
 
-## Final Notes
+## 🤝 Final Notes
 Each task can be viewed independently through the navigation bar.
 This project was built with care, clarity, and developer experience in mind — I hope you enjoy reviewing it as much as I enjoyed building it!
 
