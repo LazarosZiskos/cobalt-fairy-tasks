@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.my-button {
+    font-family: 'Inter', sans-serif;
+    font-size:14px;
+    padding : 10px 20px;
+    color: black;
+    cursor: pointer;
+    border:2px solid;
+    border-radius: 4px; 
+   
+
+    &.primary {
+        border-color:#FF645D;
+        background-color: #FFDAC6;
+
+        &:hover {
+            background-color: #FF645D;
+        }
+    }
+
+    &.secondary {
+        border-color: #dad2c6;
+        background-color: #FFF8EF;
+
+        &:hover {
+            background-color: #dad2c6;;
+        }
+    }
+
+   
+    
+}

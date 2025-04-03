@@ -38,7 +38,7 @@ const Posts = () => {
       return sortAsc ? a.id - b.id : b.id - a.id;
     });
     setPosts(sorted);
-    setSortAsc(!sortAsc); // toggle direction
+    setSortAsc(!sortAsc);
   };
 
   return (
@@ -59,9 +59,9 @@ const Posts = () => {
               >
                 ID{" "}
                 {sortAsc ? (
-                  <FaChevronUp color="red" size={20} />
-                ) : (
                   <FaChevronDown color="red" size={20} />
+                ) : (
+                  <FaChevronUp color="red" size={20} />
                 )}
               </th>
               <th>Title</th>
