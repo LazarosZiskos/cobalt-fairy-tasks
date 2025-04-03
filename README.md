@@ -7,7 +7,7 @@ This is a React project built to demonstrate clean architecture, component desig
 
 ## ✅ Project Status
 
-All required tasks have been successfully completed — including all core functionality, authentication flow, form handling, and protected API reque
+All required tasks have been successfully completed — including all core functionality, authentication flow, form handling, and protected API requests.
 
 Bonus improvements like styling, input validation, and navigation were added to enhance the experience and code clarity.
 
